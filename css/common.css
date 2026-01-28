@@ -1,0 +1,420 @@
+/* 拼好班 - 重新设计的公共样式 */
+/* 设计理念：流动的协作 - 现代玻璃态 + 柔和渐变 */
+
+/* ==================== CSS变量定义 ==================== */
+:root {
+  /* 主色调 - 增强的渐变色 */
+  --color-primary: #2563EB;
+  --color-primary-light: #3B82F6;
+  --color-primary-dark: #1D4ED8;
+  --color-primary-lighter: #DBEAFE;
+  --color-primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --color-primary-soft: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+
+  /* 辅助色彩 - 温暖的橙色渐变 */
+  --color-secondary: #F59E0B;
+  --color-secondary-light: #FBBF24;
+  --color-secondary-dark: #D97706;
+  --color-secondary-lighter: #FEF3C7;
+  --color-secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+
+  /* 中性色 */
+  --color-gray-900: #1F2937;
+  --color-gray-600: #6B7280;
+  --color-gray-400: #9CA3AF;
+  --color-gray-200: #E5E7EB;
+  --color-gray-100: #F3F4F6;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* 功能色彩 - 增强版 */
+  --color-success: #10B981;
+  --color-success-bg: #D1FAE5;
+  --color-success-gradient: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+
+  --color-warning: #F59E0B;
+  --color-warning-bg: #FEF3C7;
+  --color-warning-gradient: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+
+  --color-error: #EF4444;
+  --color-error-bg: #FEE2E2;
+  --color-error-gradient: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+
+  --color-info: #3B82F6;
+  --color-info-bg: #DBEAFE;
+
+  /* 背景渐变 */
+  --bg-gradient-primary: linear-gradient(180deg, #f8f9ff 0%, #ffffff 100%);
+  --bg-gradient-card: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
+
+  /* 玻璃态效果 */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  --glass-blur: blur(10px);
+
+  /* 字体大小 */
+  --font-size-large-title: 32px;
+  --font-size-title1: 28px;
+  --font-size-title2: 22px;
+  --font-size-title3: 20px;
+  --font-size-body: 16px;
+  --font-size-subheadline: 15px;
+  --font-size-footnote: 13px;
+  --font-size-caption: 12px;
+  --font-size-button: 16px;
+
+  /* 间距 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+
+  /* 圆角 - 更柔和 */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 50%;
+
+  /* 阴影 - 更精致 */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.15);
+  --shadow-colored: 0 8px 24px rgba(102, 126, 234, 0.25);
+  --shadow-glow: 0 0 20px rgba(102, 126, 234, 0.3);
+
+  /* 动画时长 */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 350ms;
+  --duration-slower: 500ms;
+
+  /* 缓动函数 */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ==================== 重置样式 ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+  color: var(--color-gray-900);
+  background: var(--bg-gradient-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==================== iPhone 16 Pro Max Mockup ==================== */
+.phone-mockup {
+  width: 430px;
+  height: 932px;
+  margin: 40px auto;
+  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-radius: 55px;
+  padding: 12px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  position: relative;
+}
+
+/* 动态岛 - 增强效果 */
+.phone-mockup::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 126px;
+  height: 37px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) inset;
+}
+
+/* 屏幕容器 */
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-gradient-primary);
+  border-radius: 47px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 安全区域 */
+.safe-area-top {
+  height: 59px;
+  flex-shrink: 0;
+}
+
+.safe-area-bottom {
+  height: 34px;
+  flex-shrink: 0;
+}
+
+/* 内容区域 */
+.phone-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 隐藏滚动条但保持功能 */
+.phone-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* ==================== 通用布局类 ==================== */
+.container {
+  padding: 0 var(--spacing-lg);
+}
+
+.section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-xs { gap: var(--spacing-xs); }
+.gap-sm { gap: var(--spacing-sm); }
+.gap-md { gap: var(--spacing-md); }
+.gap-lg { gap: var(--spacing-lg); }
+
+/* ==================== 文字样式类 ==================== */
+.text-large-title {
+  font-size: var(--font-size-large-title);
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--color-gray-900) 0%, var(--color-gray-600) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-title1 {
+  font-size: var(--font-size-title1);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text-title2 {
+  font-size: var(--font-size-title2);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.text-title3 {
+  font-size: var(--font-size-title3);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.text-body {
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.text-subheadline {
+  font-size: var(--font-size-subheadline);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--color-gray-600);
+}
+
+.text-footnote {
+  font-size: var(--font-size-footnote);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-gray-400);
+}
+
+.text-caption {
+  font-size: var(--font-size-caption);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* 文字颜色 */
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-gray { color: var(--color-gray-600); }
+.text-light { color: var(--color-gray-400); }
+.text-white { color: var(--color-white); }
+
+/* 文字截断 */
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-ellipsis-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ==================== 响应式设计 ==================== */
+@media (max-width: 430px) {
+  .phone-mockup {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .phone-mockup::before {
+    display: none;
+  }
+
+  .phone-screen {
+    border-radius: 0;
+  }
+}
+
+/* ==================== 工具类 ==================== */
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+.mt-xs { margin-top: var(--spacing-xs); }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-xs { margin-bottom: var(--spacing-xs); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+.p-xs { padding: var(--spacing-xs); }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }
+
+/* ==================== 动画关键帧 ==================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* 页面加载动画 */
+.phone-content > * {
+  animation: fadeIn var(--duration-slow) var(--ease-smooth);
+}

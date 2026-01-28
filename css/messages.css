@@ -1,0 +1,165 @@
+/* 消息中心页面样式 - 重新设计 */
+
+/* 分类Tab */
+.message-tabs {
+  display: flex;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.message-tab {
+  flex: 1;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--color-gray-600);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-subheadline);
+  font-weight: 600;
+  transition: all var(--duration-normal) var(--ease-smooth);
+  border: 1px solid transparent;
+}
+
+.message-tab:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-1px);
+}
+
+.message-tab.active {
+  background: var(--color-primary-gradient);
+  color: var(--color-white);
+  box-shadow: var(--shadow-colored);
+  transform: translateY(-2px);
+}
+
+.message-tab:active {
+  transform: translateY(0);
+}
+
+/* 消息列表 */
+.message-list {
+  background: transparent;
+}
+
+.message-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all var(--duration-normal) var(--ease-smooth);
+  position: relative;
+  background: var(--color-white);
+  margin-bottom: 1px;
+}
+
+.message-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--color-primary-gradient);
+  opacity: 0;
+  transition: opacity var(--duration-normal);
+}
+
+.message-item:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateX(4px);
+}
+
+.message-item:hover::before {
+  opacity: 1;
+}
+
+.message-item:active {
+  transform: translateX(2px);
+}
+
+.message-item.unread {
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.08) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.message-item.unread::before {
+  opacity: 1;
+}
+
+.message-item.unread:hover {
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.12) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+/* 消息头像 */
+.message-avatar {
+  flex-shrink: 0;
+}
+
+/* 消息内容 */
+.message-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+}
+
+.message-title {
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  color: var(--color-gray-900);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.message-time {
+  font-size: var(--font-size-footnote);
+  color: var(--color-gray-400);
+  flex-shrink: 0;
+  margin-left: var(--spacing-sm);
+  font-weight: 500;
+}
+
+.message-preview {
+  font-size: var(--font-size-subheadline);
+  color: var(--color-gray-600);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.message-item.unread .message-preview {
+  color: var(--color-gray-900);
+  font-weight: 500;
+}
+
+/* 未读徽章 */
+.message-badge {
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  margin-top: 8px;
+  box-shadow: 0 2px 4px rgba(255, 107, 107, 0.4);
+  animation: scaleIn var(--duration-normal) var(--ease-bounce);
+}
+
+.message-item:not(.unread) .message-badge {
+  display: none;
+}
