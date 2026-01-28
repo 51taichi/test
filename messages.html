@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>消息中心 - 拼好班</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/messages.css">
+</head>
+<body>
+  <div class="phone-mockup">
+    <div class="phone-screen">
+      <div class="safe-area-top"></div>
+
+      <!-- 导航栏 -->
+      <div class="navbar">
+        <h1 class="navbar-title">消息</h1>
+        <div class="navbar-right">
+          <button class="navbar-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- 页面内容 -->
+      <div class="phone-content">
+        <!-- 分类Tab -->
+        <div class="message-tabs">
+          <button class="message-tab active">全部</button>
+          <button class="message-tab">系统通知</button>
+          <button class="message-tab">团队消息</button>
+        </div>
+
+        <!-- 消息列表 -->
+        <div class="message-list">
+          <!-- 系统通知 -->
+          <div class="message-item unread">
+            <div class="message-avatar">
+              <div class="avatar" style="background: var(--color-primary-lighter); color: var(--color-primary);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="message-content">
+              <div class="message-header">
+                <span class="message-title">系统通知</span>
+                <span class="message-time">5分钟前</span>
+              </div>
+              <div class="message-preview">您申请的"电商小程序开发项目"已通过审核，项目方邀请您加入团队</div>
+            </div>
+            <div class="message-badge"></div>
+          </div>
+
+          <!-- 团队消息 -->
+          <div class="message-item unread">
+            <div class="message-avatar">
+              <div class="avatar">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Zhang" alt="张三">
+              </div>
+            </div>
+            <div class="message-content">
+              <div class="message-header">
+                <span class="message-title">张三 · 电商小程序项目</span>
+                <span class="message-time">1小时前</span>
+              </div>
+              <div class="message-preview">大家好，我们今天下午3点开个线上会议，讨论一下UI设计方案</div>
+            </div>
+            <div class="message-badge"></div>
+          </div>
+
+          <!-- 系统通知 -->
+          <div class="message-item unread">
+            <div class="message-avatar">
+              <div class="avatar" style="background: var(--color-success-bg); color: var(--color-success);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="message-content">
+              <div class="message-header">
+                <span class="message-title">项目完成</span>
+                <span class="message-time">2小时前</span>
+              </div>
+              <div class="message-preview">"企业官网设计与开发"项目已完成，请对团队成员进行评价</div>
+            </div>
+            <div class="message-badge"></div>
+          </div>
+
+          <!-- 团队消息 -->
+          <div class="message-item">
+            <div class="message-avatar">
+              <div class="avatar">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Li" alt="李四">
+              </div>
+            </div>
+            <div class="message-content">
+              <div class="message-header">
+                <span class="message-title">李四 · AI智能客服系统</span>
+                <span class="message-time">昨天</span>
+              </div>
+              <div class="message-preview">我已经完成了后端API的开发，可以开始前端对接了</div>
+            </div>
+          </div>
+
+          <!-- 系统通知 -->
+          <div class="message-item">
+            <div class="message-avatar">
+              <div class="avatar" style="background: var(--color-secondary-lighter); color: var(--color-secondary);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+            </div>
+            <div class="message-content">
+              <div class="message-header">
+                <span class="message-title">提醒</span>
+                <span class="message-time">昨天</span>
+              </div>
+              <div class="message-preview">您有2个项目即将到期，请及时完成交付</div>
+            </div>
+          </div>
+
+          <!-- 团队消息 -->
+          <div class="message-item">
+            <div class="message-avatar">
+              <div class="avatar">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Wang" alt="王五">
+              </div>
+            </div>
+            <div class="message-content">
+              <div class="message-header">
+                <span class="message-title">王五 · 移动App UI/UX设计</span>
+                <span class="message-time">2天前</span>
+              </div>
+              <div class="message-preview">设计稿已经上传到Figma，大家可以查看并提出意见</div>
+            </div>
+          </div>
+
+          <!-- 系统通知 -->
+          <div class="message-item">
+            <div class="message-avatar">
+              <div class="avatar" style="background: var(--color-info-bg); color: var(--color-info);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="message-content">
+              <div class="message-header">
+                <span class="message-title">账户安全</span>
+                <span class="message-time">3天前</span>
+              </div>
+              <div class="message-preview">您的账户已完成实名认证，信用分+10</div>
+            </div>
+          </div>
+
+          <!-- 团队消息 -->
+          <div class="message-item">
+            <div class="message-avatar">
+              <div class="avatar">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Zhao" alt="赵六">
+              </div>
+            </div>
+            <div class="message-content">
+              <div class="message-header">
+                <span class="message-title">赵六 · 短视频营销推广</span>
+                <span class="message-time">3天前</span>
+              </div>
+              <div class="message-preview">第一版视频脚本已经完成，请大家审阅</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 底部Tab导航 -->
+      <div class="tab-bar">
+        <a href="index.html" class="tab-item">
+          <div class="tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <span class="tab-label">首页</span>
+        </a>
+
+        <a href="my-projects.html" class="tab-item">
+          <div class="tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <span class="tab-label">项目</span>
+        </a>
+
+        <a href="messages.html" class="tab-item active">
+          <div class="tab-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <span class="tab-label">消息</span>
+          <div class="tab-badge">3</div>
+        </a>
+
+        <a href="profile.html" class="tab-item">
+          <div class="tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <span class="tab-label">我的</span>
+        </a>
+      </div>
+
+      <div class="safe-area-bottom"></div>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/messages.js"></script>
+</body>
+</html>

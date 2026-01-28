@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>项目详情 - 拼好班</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+  <!-- iPhone 16 Pro Max Mockup -->
+  <div class="phone-mockup">
+    <div class="phone-screen">
+      <!-- 安全区域顶部 -->
+      <div class="safe-area-top"></div>
+
+      <!-- 导航栏 -->
+      <div class="navbar">
+        <div class="navbar-left">
+          <button class="navbar-btn" data-action="back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+          </button>
+        </div>
+        <h1 class="navbar-title">项目详情</h1>
+        <div class="navbar-right">
+          <button class="navbar-btn" id="favoriteBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- 页面内容 -->
+      <div class="phone-content">
+        <div class="container">
+          <!-- 项目信息 -->
+          <div id="projectDetail" class="project-detail">
+            <!-- 内容将通过JavaScript动态生成 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 底部操作栏 -->
+      <div class="bottom-action-bar">
+        <button class="btn btn-primary btn-full" id="applyBtn">
+          申请加入
+        </button>
+      </div>
+
+      <!-- 安全区域底部 -->
+      <div class="safe-area-bottom"></div>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/project-detail.js"></script>
+</body>
+</html>

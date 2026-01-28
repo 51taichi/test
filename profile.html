@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>我的 - 拼好班</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+  <div class="phone-mockup">
+    <div class="phone-screen">
+      <div class="safe-area-top"></div>
+
+      <!-- 页面内容 -->
+      <div class="phone-content">
+        <!-- 个人信息卡片 -->
+        <div class="profile-header">
+          <div class="profile-info">
+            <div class="avatar avatar-lg">
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=MyProfile" alt="我的头像">
+            </div>
+            <div class="profile-details">
+              <h2 class="profile-name">张小明</h2>
+              <div class="profile-meta">
+                <span class="tag tag-primary">已认证</span>
+                <span class="profile-credit">信用分：95</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-secondary" style="height: 36px; padding: 0 var(--spacing-lg);">
+            编辑资料
+          </button>
+        </div>
+
+        <!-- 统计数据 -->
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value">12</div>
+            <div class="stat-label">参与项目</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">8</div>
+            <div class="stat-label">完成项目</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">¥28k</div>
+            <div class="stat-label">累计收入</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">4.9</div>
+            <div class="stat-label">平均评分</div>
+          </div>
+        </div>
+
+        <!-- 技能标签 -->
+        <div class="profile-section">
+          <h3 class="section-title">我的技能</h3>
+          <div class="skill-tags">
+            <span class="tag">UI设计</span>
+            <span class="tag">前端开发</span>
+            <span class="tag">React</span>
+            <span class="tag">Figma</span>
+            <span class="tag">小程序开发</span>
+            <span class="tag">Vue.js</span>
+          </div>
+        </div>
+
+        <!-- 功能菜单 -->
+        <div class="menu-section">
+          <div class="menu-item">
+            <div class="menu-icon" style="background: var(--color-primary-lighter); color: var(--color-primary);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="menu-content">
+              <div class="menu-title">个人资料</div>
+              <div class="menu-desc">查看和编辑个人信息</div>
+            </div>
+            <div class="menu-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-icon" style="background: var(--color-success-bg); color: var(--color-success);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <div class="menu-content">
+              <div class="menu-title">我的作品集</div>
+              <div class="menu-desc">展示您的优秀作品</div>
+            </div>
+            <div class="menu-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-icon" style="background: var(--color-secondary-lighter); color: var(--color-secondary);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div class="menu-content">
+              <div class="menu-title">技能认证</div>
+              <div class="menu-desc">获得专业技能认证徽章</div>
+            </div>
+            <div class="menu-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-icon" style="background: var(--color-info-bg); color: var(--color-info);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <div class="menu-content">
+              <div class="menu-title">收入统计</div>
+              <div class="menu-desc">查看收入明细和趋势</div>
+            </div>
+            <div class="menu-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- 设置菜单 -->
+        <div class="menu-section">
+          <div class="menu-item">
+            <div class="menu-icon" style="background: var(--color-gray-100); color: var(--color-gray-600);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 1v6m0 6v6m5.2-13.2l-4.2 4.2m0 6l4.2 4.2M23 12h-6m-6 0H1m18.2 5.2l-4.2-4.2m0-6l4.2-4.2"></path>
+              </svg>
+            </div>
+            <div class="menu-content">
+              <div class="menu-title">设置</div>
+            </div>
+            <div class="menu-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-icon" style="background: var(--color-gray-100); color: var(--color-gray-600);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <div class="menu-content">
+              <div class="menu-title">帮助与反馈</div>
+            </div>
+            <div class="menu-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-icon" style="background: var(--color-gray-100); color: var(--color-gray-600);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <div class="menu-content">
+              <div class="menu-title">关于拼好班</div>
+            </div>
+            <div class="menu-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- 退出登录按钮 -->
+        <div class="container" style="padding-top: var(--spacing-xl); padding-bottom: var(--spacing-xl);">
+          <button class="btn btn-secondary btn-full" id="logoutBtn">
+            退出登录
+          </button>
+        </div>
+      </div>
+
+      <!-- 底部Tab导航 -->
+      <div class="tab-bar">
+        <a href="index.html" class="tab-item">
+          <div class="tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <span class="tab-label">首页</span>
+        </a>
+
+        <a href="my-projects.html" class="tab-item">
+          <div class="tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <span class="tab-label">项目</span>
+        </a>
+
+        <a href="messages.html" class="tab-item">
+          <div class="tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <span class="tab-label">消息</span>
+          <div class="tab-badge">3</div>
+        </a>
+
+        <a href="profile.html" class="tab-item active">
+          <div class="tab-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <span class="tab-label">我的</span>
+        </a>
+      </div>
+
+      <div class="safe-area-bottom"></div>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
